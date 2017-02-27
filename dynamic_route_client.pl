@@ -77,11 +77,7 @@ sub getIps {
                 if ($tunIps[$i] =~  m/$reRange/is){
                         $ipaddress=$1;
                         $subnet=$3;
-                        if ( ( $ipaddress ne "0.0.0.0") and
-                                ( substr($ipaddress, 0, 2) ne "10") and (
-                                ( substr($ipaddress, 0, 10) eq "94.141.209") ||
-                                ( substr($ipaddress, 0, 10) eq "94.141.208") ))
-                        {
+                        if ( ( $ipaddress ne "0.0.0.0") {
                                push @Ips , "$ipaddress/$subnet\n" ;
                         }
                 }
